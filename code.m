@@ -12,7 +12,6 @@ title('Initial Image :');
 % call matlab_canny() :
 [ I_mtlb ] = matlab_canny( image );
 
-
 % Now show both final images(my canny and matlab's) in the same figure :
 figure,
 subplot(1,2,1);
@@ -22,11 +21,7 @@ subplot(1,2,2);
 imshow(uint8(I_mtlb));
 title('Matlab´s canny :');
 
-
-
 % Comparing . . . :
-
-
 
 % Checking how similar the two images-results are :
 fprintf('Comparing the two final Images ...\n');
@@ -43,7 +38,7 @@ fprintf('Differences printed with imshowpair()! \n');
 fprintf('\n');
 
 fprintf('Find Differences with a 3rd image I_diff :\n');
-% get points of difference :
+% Getting points of difference :
 I_diff=abs(I_mine-I_mtlb);
 % 0 means same value (both 0 or both 255) so it's a black pixel,
 % 255 means different values (0 and 255) so it's a white pixel.
@@ -55,8 +50,7 @@ title('Image with differences :');
 num_pixels=size(I_diff,1)*size(I_diff,2);
 fprintf('Number of total pixels: %d \n',num_pixels);
 
-% Find nonzero elements in points_diff 
-% in other words find number of white pixels:
+% Find nonzero elements in points_diff in other words find number of white pixels:
 num_points_diff = nnz(I_diff);
 % so matching elements will be all the rest :
 num_points_match = num_pixels - num_points_diff;

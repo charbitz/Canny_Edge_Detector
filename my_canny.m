@@ -74,9 +74,7 @@ BW = BW.*magn;
 
 % Hysteresis Thresholding Procedure :
 
-%Values for Thresholding
-% T_Low = 0.075;
-% T_High = 0.175; 
+% Values for Thresholding :
 
 %   for : Lenna.jpg  ,forest.jpg , emogi.jpg
   T_Low = 0.075;
@@ -92,6 +90,7 @@ BW = BW.*magn;
 
 T_Low = T_Low * max(max(BW));
 T_High = T_High * max(max(BW));
+
 % I_ht is the image with (0s and 1s after hysterisis thresholding) :
 I_ht = zeros(lines,cols);
 
@@ -101,6 +100,7 @@ for i=1:lines
             I_ht(i,j) = 0;
         elseif (BW(i,j) > T_High)
             I_ht(i,j) = 1;
+			
 % check if neighbour pixels are in an edge point :
         elseif ( BW(i+1,j)>T_High || BW(i-1,j)>T_High || BW(i,j+1)>T_High || BW(i,j-1)>T_High || BW(i-1, j-1)>T_High || BW(i-1, j+1)>T_High || BW(i+1, j+1)>T_High || BW(i+1, j-1)>T_High)
             I_ht(i,j) = 1;
@@ -108,10 +108,10 @@ for i=1:lines
     end;
 end;
 
-% Convert I_ht to final Image I_mine 
-% with white spots at the edge points (value:255) :
+% Convert I_ht to final Image I_mine with white spots at the edge points (value:255) :
 % I_mine = uint8(T_res.*255);
 I_mine = I_ht.*255;
+
 % Show images all together :
 figure,
 subplot(2,3,1);
@@ -133,6 +133,7 @@ imshow(y_dir);
 title('Y direction Sobel :');
 
 subplot(2,3,5);
+
 % Important to show magnitude :
 imshow(uint8(magn));
 title('Magnitude of Sobel Operator :');
@@ -152,4 +153,3 @@ imshow(uint8(I_mine));
 title('my canny Final Image :');
 
 end
-
