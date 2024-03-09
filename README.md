@@ -1,5 +1,5 @@
 # Description
-***This repo contains the final project of the course **Digital Image Processing** of the 8th semester. The purpose of this project was the implementation of Canny's Edge detector. ***
+***This repo contains the final project of the course **Digital Image Processing** of the 8th semester. The purpose of this project was the implementation of Canny's Edge detector.***
 
 In addition, in order to check the performance of this Edge Detector, a matlab preloaded library of Canny Edge detetor was used for comparison.
 
