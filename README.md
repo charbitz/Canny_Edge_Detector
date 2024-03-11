@@ -13,3 +13,35 @@ In code files, there are:
 In image files, there are:
 * Images  : the directory with the testing images.
 * results : the directory with some screenshot results for every testing image.
+
+# Image Results
+
+
+| input image |
+|---------|
+| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/Images/emogi.jpg)   |
+
+
+|   My Canny filter results  |
+|---------|
+| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/filters%20results.png)   |
+
+
+
+|   Comparison of the two detectors |
+|---------|
+| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/results%20comparison.png)   |
+
+
+### Comparing the two results:
+
+|   plotting the difference in pixels |
+|---------|
+| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/diffs.png)   |
+
+#### Measurements:
+
+* Number of total common pixels: 50325
+* Number of white pixels: 8345
+* Number of black pixels: 41980
+* Percentage of matching: 83.4178
