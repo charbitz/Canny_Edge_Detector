@@ -1,47 +1,51 @@
-# Description
-***This repo contains the final project of the course **Digital Image Processing** of the 8th semester. The purpose of this project was the implementation of Canny's Edge detector.***
+# Canny Edge Detector Implementation
 
-In addition, in order to check the performance of this Edge Detector, a matlab preloaded library of Canny Edge detetor was used for comparison.
+This repository contains the final project for the **Digital Image Processing** course, completed during the 8th semester at EECE, DUTh. The project focuses on the **implementation of Canny's Edge Detector** from scratch, with a comparison to MATLAB's built-in Canny Edge Detector to evaluate performance.
 
-## Files explanation:
+## Project Overview
 
-In code files, there are:
-* code.m 	 : the main script, in which there is the main pipeline of the project.The comparison with Edge detector of MATLAB was also included.
-* my_canny.m 	 : the script, in which there is the implemetation of the Canny Edge Detector.
-* matlab_canny.m : the script, in which there is the pipeline for the MATLAB's library for Canny Edge Detection.
+The primary goal of this project was to implement Canny's Edge Detection algorithm manually and compare its results to those produced by MATLAB's preloaded library for Canny Edge Detection.
 
-In image files, there are:
-* Images  : the directory with the testing images.
-* results : the directory with some screenshot results for every testing image.
+## Files Explanation
 
-# Image Results
+### Code Files:
+- **`code.m`**: The main script that contains the overall pipeline for the project, including the comparison with MATLAB's built-in Canny Edge Detector.
+- **`my_canny.m`**: The script implementing Canny's Edge Detection from scratch.
+- **`matlab_canny.m`**: The script using MATLAB's Canny Edge Detection library for comparison purposes.
 
+### Image Files:
+- **`Images/`**: A directory containing the images used for testing the edge detection algorithms.
+- **`results/`**: A directory containing screenshots of the edge detection results for each test image.
 
-| input image |
-|---------|
-| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/Images/emogi.jpg)   |
+## Image Results
 
+### Input Image
 
-|   My Canny filter results  |
-|---------|
-| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/filters%20results.png)   |
+| Input Image |
+|-------------|
+| ![Input Image](https://github.com/charbitz/Canny_Edge_Detector/blob/master/Images/emogi.jpg) |
 
+### My Canny Filter Results
 
+| My Canny Filter Results |
+|-------------------------|
+| ![My Canny Filter Results](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/filters%20results.png) |
 
-|   Comparison of the two detectors |
-|---------|
-| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/results%20comparison.png)   |
+### Comparison of the Two Detectors
 
+| Comparison of My Canny and MATLAB's Canny |
+|-------------------------------------------|
+| ![Comparison](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/results%20comparison.png) |
 
-### Comparing the two results:
+### Pixel Difference Between the Two Results
 
-|   plotting the difference in pixels |
-|---------|
-| ![](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/diffs.png)   |
+| Difference in Pixels |
+|----------------------|
+| ![Pixel Difference](https://github.com/charbitz/Canny_Edge_Detector/blob/master/results/emoji/diffs.png) |
 
-#### Measurements:
+## Measurements
 
-* Number of total common pixels: 50325
-* Number of white pixels: 8345
-* Number of black pixels: 41980
-* Percentage of matching: 83.4178
+- **Total number of common pixels**: 50,325
+- **Number of white pixels**: 8,345
+- **Number of black pixels**: 41,980
+- **Percentage of matching**: 83.42%
